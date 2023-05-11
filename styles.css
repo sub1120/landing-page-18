@@ -1,5 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap");
+
 * {
   padding: 0px;
   margin: 0px;
   outline: 0px;
+  font-family: "Hind Siliguri";
+}
+
+.contact {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 0px 60px;
+}
+
+.contact div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.offer {
+  font-weight: 600;
+  color: #9e3040;
 }
