@@ -124,6 +124,14 @@
 
 .featured-products {
   display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+}
+
+.product-item-main {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .product-image img {
@@ -214,5 +222,11 @@
 
   .feature-heading {
     font-size: 25px;
+  }
+
+  .product-item-main {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 3;
   }
 }
