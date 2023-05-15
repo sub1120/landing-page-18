@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;700&display=swap");
 
 * {
   padding: 0px;
@@ -8,21 +8,210 @@
 }
 
 .contact {
-  height: 50px;
+  display: none;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f6f6f6;
-  padding: 0px 60px;
+  height: 80px;
+  padding: 0px 20px;
 }
 
-.contact div {
+.nav-left {
+  font-size: 20px;
+  font-weight: 600;
+  color: #9e3040;
+}
+
+.nav-middle {
+  display: none;
+}
+
+.nav-right div {
+  display: none;
+}
+
+.sign-in-btn {
+  font-size: 15px;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  background-color: #9e3040;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.hero {
+  background-image: url("./assets/images/hero-banner.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 45vw;
+  padding-left: 8vw;
+  padding-top: 8vw;
+  font-size: 3vw;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shop-btn {
   display: flex;
   align-items: center;
+  width: fit-content;
+  padding: 0.5vw 2vw;
+  border-radius: 3px;
+  background-color: #ffffff;
   gap: 5px;
 }
 
-.offer {
-  font-weight: 600;
+.shop-btn div button {
+  font-size: 2vw;
+  background-color: #ffffff;
+  border: none;
   color: #9e3040;
+  font-weight: 600;
+}
+
+.arrow {
+  width: 2vw;
+}
+
+.arrow img {
+  width: 100%;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+  background-image: none;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.feature-image {
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 1px 1px 5px rgb(215, 210, 210);
+  border-radius: 5px;
+  padding: 10px;
+  margin: auto;
+  background-color: #ffffff;
+}
+
+.feature-image img {
+  width: 60px;
+}
+
+.feature-heading {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.featured-products {
+}
+
+.product-image img {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .contact {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 0px 60px;
+  }
+
+  .contact div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .offer {
+    font-weight: 600;
+    color: #9e3040;
+  }
+
+  .navbar {
+    padding: 0px 60px;
+  }
+
+  .nav-left {
+    font-size: 30px;
+  }
+
+  .nav-middle {
+    display: block;
+  }
+
+  .nav-middle ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-middle ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+
+  .nav-middle ul li a:hover {
+    font-weight: 600;
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-right div {
+    display: block;
+    box-shadow: 1px 1px 5px rgb(215, 210, 210);
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  .sign-in-btn {
+    font-size: 20px;
+  }
+
+  .features {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+    gap: 10px;
+    background-image: url("./assets/images/feature-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .features {
+    padding: 80px;
+  }
+
+  .feature-heading {
+    font-size: 25px;
+  }
 }
