@@ -124,8 +124,9 @@
 
 .featured-products {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
   gap: 10px;
+  padding: 5vw;
 }
 
 .product-item-main {
@@ -134,8 +135,15 @@
   grid-column-end: 3;
 }
 
+.product-item {
+  padding: 15px 10px;
+  background-color: #f3f5f6;
+  border-radius: 10px;
+}
+
 .product-image img {
   width: 100%;
+  border-radius: 10px;
 }
 
 @media (min-width: 900px) {
@@ -224,7 +232,13 @@
     font-size: 25px;
   }
 
+  .featured-products {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: initial;
+  }
+
   .product-item-main {
+    grid-column-end: initial;
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 3;
