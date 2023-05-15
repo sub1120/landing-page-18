@@ -123,6 +123,7 @@
 }
 
 .featured-products {
+  display: grid;
 }
 
 .product-image img {
