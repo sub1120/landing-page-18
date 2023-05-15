@@ -7,10 +7,16 @@
   font-family: "Hind Siliguri";
 }
 
+/* 
+-----------------------contact section------------------------
+*/
 .contact {
   display: none;
 }
 
+/* 
+-----------------------navigation section---------------------
+*/
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -43,6 +49,9 @@
   cursor: pointer;
 }
 
+/* 
+-----------------------hero section---------------------
+*/
 .hero {
   background-image: url("./assets/images/hero-banner.png");
   background-repeat: no-repeat;
@@ -87,6 +96,9 @@
   width: 100%;
 }
 
+/* 
+-----------------------feature section---------------------
+*/
 .features {
   display: flex;
   flex-direction: column;
@@ -122,11 +134,24 @@
   font-weight: 600;
 }
 
+/* 
+-----------------------featured product section---------------------
+*/
+
+.featured {
+  padding: 3vw;
+}
+
+.featured-heading {
+  margin: 50px;
+  font-size: 20px;
+  text-align: center;
+}
+
 .featured-products {
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr;
-  gap: 10px;
-  padding: 5vw;
+  grid-template-rows: 0.5 1fr 1fr;
+  gap: 30px;
 }
 
 .product-item-main {
@@ -135,10 +160,20 @@
   grid-column-end: 3;
 }
 
+.product-image-main img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 .product-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
   padding: 15px 10px;
   background-color: #f3f5f6;
   border-radius: 10px;
+  font-size: 18px;
 }
 
 .product-image img {
@@ -146,7 +181,122 @@
   border-radius: 10px;
 }
 
+.product-buy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-price {
+  color: #9e3040;
+  font-weight: 600;
+}
+
+.add-to-cart-btn button {
+  padding: 5px 15px;
+  background-color: #232323;
+  color: #ffffff;
+  border-radius: 3px;
+  border: none;
+}
+
+.show-more {
+  margin: 30px auto;
+  width: fit-content;
+}
+
+.show-more button {
+  padding: 10px 25px;
+  background-color: #9e3040;
+  color: #ffffff;
+  border-radius: 3px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 
+-----------------------trending product section---------------------
+*/
+
+.trends {
+  padding: 3vw;
+}
+
+.trending-heading {
+  margin: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.trending-products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.trending-product-item {
+  box-shadow: 1px 1px 5px rgb(215, 210, 210);
+  border-radius: 10px;
+}
+
+.trending-product-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.trending-product-heading {
+  font-weight: 600;
+  color: #9e3040;
+  padding: 5px 20px;
+}
+
+.trending-product-desc {
+  padding: 5px 20px;
+}
+
+/* 
+  -----------------------testimonial section------------------------
+*/
+
+.testmonial-heading {
+  margin: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.testmonial-section {
+  padding: 3vw;
+}
+
+.testimonial {
+  position: relative;
+  text-align: center;
+  background-color: #9e3040;
+  color: #ffffff;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.quote-left {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+.quote-right {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+.quote-left img,
+.quote-right img {
+  width: 10vw;
+}
+
 @media (min-width: 900px) {
+  /* 
+  -----------------------contact section------------------------
+  */
   .contact {
     display: flex;
     height: 50px;
@@ -167,6 +317,9 @@
     color: #9e3040;
   }
 
+  /* 
+  -----------------------navigation section---------------------
+  */
   .navbar {
     padding: 0px 60px;
   }
@@ -213,6 +366,9 @@
     font-size: 20px;
   }
 
+  /* 
+  -----------------------feature section---------------------
+  */
   .features {
     flex-direction: row;
     justify-content: space-around;
@@ -228,10 +384,13 @@
     padding: 80px;
   }
 
-  .feature-heading {
+  .featured-heading {
     font-size: 25px;
   }
 
+  /* 
+  -----------------------featured product section---------------------
+  */
   .featured-products {
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: initial;
@@ -242,5 +401,31 @@
     grid-column-start: 1;
     grid-row-start: 1;
     grid-row-end: 3;
+  }
+
+  /* 
+  -----------------------trending product section---------------------
+  */
+  .trending-products {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  /* 
+  -----------------------testimonial section------------------------
+  */
+
+  .testimonial {
+    padding: 100px 200px;
+  }
+
+  .quote-left {
+    top: 20px;
+    left: 40px;
+  }
+  .quote-right {
+    right: 40px;
+    bottom: 20px;
   }
 }
