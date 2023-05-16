@@ -1,40 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500&display=swap");
 
 * {
   padding: 0px;
   margin: 0px;
   outline: 0px;
-  font-family: "Open Sans";
-}
-
-main {
-  max-width: 1300px;
-  margin: auto;
+  font-family: "Open Sans", "serif";
 }
 
 /* 
 -----------------------contact section------------------------
 */
-
-.contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f6f6f6;
-  padding: 0px 60px;
-  height: 50px;
-}
-
-.call,
-.email,
-.location {
+.contact {
   display: none;
-}
-
-.offer {
-  display: block;
-  font-weight: 600;
-  color: #9e3040;
 }
 
 /* 
@@ -185,9 +163,15 @@ main {
 }
 
 .featured-products {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-rows: 0.5 1fr 1fr;
+  gap: 30px;
+}
+
+.product-item-main {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .product-image-main img {
@@ -409,20 +393,30 @@ main {
 
 @media (min-width: 900px) {
   /* 
-  -----------------------@900contact section------------------------
+  -----------------------contact section------------------------
   */
-  .contact-section {
+  .contact {
+    display: flex;
+    height: 50px;
     justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 0px 60px;
   }
 
-  .contact-section div {
+  .contact div {
     display: flex;
     align-items: center;
     gap: 5px;
   }
 
+  .offer {
+    font-weight: 600;
+    color: #9e3040;
+  }
+
   /* 
-  -----------------------@900navigation section---------------------
+  -----------------------navigation section---------------------
   */
 
   .menu {
@@ -466,11 +460,9 @@ main {
 
   .nav-right div {
     display: block;
-    height: 22px;
-  }
-
-  .nav-right div img {
-    height: 100%;
+    box-shadow: 1px 1px 5px rgb(215, 210, 210);
+    border-radius: 5px;
+    padding: 10px;
   }
 
   .sign-in-btn {
@@ -478,7 +470,7 @@ main {
   }
 
   /* 
-  -----------------------@900feature section---------------------
+  -----------------------feature section---------------------
   */
   .features-section {
     flex-direction: row;
@@ -496,33 +488,45 @@ main {
   }
 
   /* 
-  -----------------------@900featured product section---------------------
+  -----------------------featured product section---------------------
   */
   .featured-products {
     display: grid;
     grid-template-columns: 1.8fr 1.1fr 1.1fr;
   }
 
+  .featured-heading {
+    font-size: 24px;
+    font-family: "Hind Siliguri", "Open Sans";
+  }
   .product-item-main {
     grid-row: span 2;
     grid-column: initial;
   }
 
   /* 
-  -----------------------@900trending product section---------------------
+  -----------------------trending product section---------------------
   */
   .trending-products {
     flex-direction: row;
     justify-content: space-between;
     gap: 20px;
   }
-
+  .trending-heading {
+    font-family: "Hind Siliguri";
+    font-size: 24px;
+  }
   /* 
-  -----------------------@900testimonial section------------------------
+  -----------------------testimonial section------------------------
   */
 
   .testimonial {
     padding: 100px 200px;
+  }
+
+  .testmonial-heading {
+    font-size: 24px;
+    font-family: "Hind Siliguri";
   }
 
   .quote-left {
@@ -556,6 +560,92 @@ main {
   }
 }
 
+/* ------------- Get in touch section ----------- */
+.get-touch-section {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 7%;
+}
+
+.get-touch-section > h3 {
+  font-family: "Hind Siliguri";
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+.gts-input > input {
+  width: 18%;
+  padding: 5px 20px;
+}
+.gts-input button {
+  margin-top: 15px;
+  padding: 7px 20px;
+  background-color: #9e3040;
+  color: #ffffff;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/*------------------ Photo gallery ------------------ */
+.product-gallery > h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-family: Hell;
+}
+.product-gallery {
+  padding: 3vw;
+}
+.product-gallery > h3 {
+  font-size: 24px;
+  font-family: "Hind Siliguri";
+  text-align: center;
+}
+.product-image-container div img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+  gap: 25px;
+}
+
+.pg-lg {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* ------------- Get in touch section ----------- */
+.get-touch-section {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 7%;
+}
+
+.get-touch-section > h3 {
+  font-family: "Hind Siliguri";
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+.gts-input > input {
+  width: 18%;
+  padding: 5px 20px;
+}
+.gts-input button {
+  margin-top: 15px;
+  padding: 7px 20px;
+  background-color: #9e3040;
+  color: #ffffff;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 /* 
   ------------- footer section ----------------------
 */
@@ -564,17 +654,15 @@ footer {
   background-color: #f3f5f6;
   display: flex;
   align-items: center;
-  padding: 70px 50px;
+  /* padding: 70px 50px; */
+  padding: 3vw;
   justify-content: space-between;
 }
 
 .f-heading {
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 10px;
-}
-
-.f-desc {
-  font-size: 17px;
+  font-family: "Hind Siliguri";
 }
 
 .f-one,
