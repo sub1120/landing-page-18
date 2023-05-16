@@ -8,34 +8,11 @@
   font-family: "Open Sans, serif";
 }
 
-main {
-  max-width: 1300px;
-  margin: auto;
-}
-
 /* 
 -----------------------contact section------------------------
 */
-
-.contact-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f6f6f6;
-  padding: 0px 60px;
-  height: 50px;
-}
-
-.call,
-.email,
-.location {
+.contact {
   display: none;
-}
-
-.offer {
-  display: block;
-  font-weight: 600;
-  color: #9e3040;
 }
 
 /* 
@@ -173,9 +150,15 @@ main {
 }
 
 .featured-products {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-rows: 0.5 1fr 1fr;
+  gap: 30px;
+}
+
+.product-item-main {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .product-image-main img {
@@ -311,39 +294,32 @@ main {
   width: 10vw;
 }
 
-@media (min-width: 600px) {
-  /* 
-  -----------------------@600featured section------------------------
-  */
-  .featured-products {
-    display: grid;
-    grid-template-rows: 0.5 1fr 1fr;
-    gap: 30px;
-  }
-
-  .product-item-main {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-}
-
 @media (min-width: 900px) {
   /* 
-  -----------------------@900contact section------------------------
+  -----------------------contact section------------------------
   */
-  .contact-section {
+  .contact {
+    display: flex;
+    height: 50px;
     justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 0px 60px;
   }
 
-  .contact-section div {
+  .contact div {
     display: flex;
     align-items: center;
     gap: 5px;
   }
 
+  .offer {
+    font-weight: 600;
+    color: #9e3040;
+  }
+
   /* 
-  -----------------------@900navigation section---------------------
+  -----------------------navigation section---------------------
   */
   .navbar {
     padding: 0px 60px;
@@ -382,11 +358,9 @@ main {
 
   .nav-right div {
     display: block;
-    height: 22px;
-  }
-
-  .nav-right div img {
-    height: 100%;
+    box-shadow: 1px 1px 5px rgb(215, 210, 210);
+    border-radius: 5px;
+    padding: 10px;
   }
 
   .sign-in-btn {
@@ -394,7 +368,7 @@ main {
   }
 
   /* 
-  -----------------------@900feature section---------------------
+  -----------------------feature section---------------------
   */
   .features {
     flex-direction: row;
@@ -416,10 +390,9 @@ main {
   }
 
   /* 
-  -----------------------@900featured product section---------------------
+  -----------------------featured product section---------------------
   */
   .featured-products {
-    display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: initial;
   }
@@ -436,7 +409,7 @@ main {
   }
 
   /* 
-  -----------------------@900trending product section---------------------
+  -----------------------trending product section---------------------
   */
   .trending-products {
     flex-direction: row;
@@ -448,7 +421,7 @@ main {
   font-size: 24px;
 }
   /* 
-  -----------------------@900testimonial section------------------------
+  -----------------------testimonial section------------------------
   */
 
   .testimonial {
@@ -540,11 +513,11 @@ main {
 */
 /* main footer */
 footer {
-  background-color: #f3f5f6;
+  background-color: #F3F5F6;
   display: flex;
   align-items:center;
-  padding: 70px 50px;
-  
+  /* padding: 70px 50px; */
+  padding: 3vw;
   justify-content: space-between;
 }
 
@@ -556,15 +529,13 @@ footer {
 
 
 
-.f-one,
-.f-two,
-.f-three {
+.f-one, .f-two , .f-three {
   height: 250px;
   width: 360px;
 }
 .f-two-item > img {
   width: 20px;
-  height: auto;
+  height: auto
 }
 
 /*  footer one styling */
@@ -574,14 +545,17 @@ footer {
 }
 .f-one > ul > li {
   padding-bottom: 20px;
+  
 }
 
 /*  footer two styling  */
-.f-two-item {
+.f-two-item  {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
   align-items: center;
+ 
+
 }
 
 /* footer three styling */
@@ -599,17 +573,19 @@ footer {
 }
 
 /* footer responsiveness */
-@media screen and (max-width: 525px) {
+@media screen and (max-width:525px){ 
   footer {
     height: auto;
     text-align: center;
     flex-wrap: wrap;
     gap: 10px;
+    
+
   }
   .f-one {
     margin-bottom: 10px;
   }
-
+ 
   .f-two {
     text-align: center;
     margin-bottom: 30px;
@@ -625,4 +601,5 @@ footer {
   .f-three {
     margin-top: 30px;
   }
+
 }
