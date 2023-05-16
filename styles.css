@@ -7,11 +7,34 @@
   font-family: "Hind Siliguri";
 }
 
+main {
+  max-width: 1300px;
+  margin: auto;
+}
+
 /* 
 -----------------------contact section------------------------
 */
-.contact {
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 0px 60px;
+  height: 50px;
+}
+
+.call,
+.email,
+.location {
   display: none;
+}
+
+.offer {
+  display: block;
+  font-weight: 600;
+  color: #9e3040;
 }
 
 /* 
@@ -154,9 +177,6 @@
   gap: 20px;
 }
 
-.product-item-main {
-}
-
 .product-image-main img {
   width: 100%;
   border-radius: 10px;
@@ -291,6 +311,9 @@
 }
 
 @media (min-width: 600px) {
+  /* 
+  -----------------------@600featured section------------------------
+  */
   .featured-products {
     display: grid;
     grid-template-rows: 0.5 1fr 1fr;
@@ -306,30 +329,20 @@
 
 @media (min-width: 900px) {
   /* 
-  -----------------------contact section------------------------
+  -----------------------@900contact section------------------------
   */
-  .contact {
-    display: flex;
-    height: 50px;
+  .contact-section {
     justify-content: space-between;
-    align-items: center;
-    background-color: #f6f6f6;
-    padding: 0px 60px;
   }
 
-  .contact div {
+  .contact-section div {
     display: flex;
     align-items: center;
     gap: 5px;
   }
 
-  .offer {
-    font-weight: 600;
-    color: #9e3040;
-  }
-
   /* 
-  -----------------------navigation section---------------------
+  -----------------------@900navigation section---------------------
   */
   .navbar {
     padding: 0px 60px;
@@ -368,9 +381,11 @@
 
   .nav-right div {
     display: block;
-    box-shadow: 1px 1px 5px rgb(215, 210, 210);
-    border-radius: 5px;
-    padding: 10px;
+    height: 22px;
+  }
+
+  .nav-right div img {
+    height: 100%;
   }
 
   .sign-in-btn {
@@ -378,7 +393,7 @@
   }
 
   /* 
-  -----------------------feature section---------------------
+  -----------------------@900feature section---------------------
   */
   .features {
     flex-direction: row;
@@ -400,7 +415,7 @@
   }
 
   /* 
-  -----------------------featured product section---------------------
+  -----------------------@900featured product section---------------------
   */
   .featured-products {
     display: grid;
@@ -416,7 +431,7 @@
   }
 
   /* 
-  -----------------------trending product section---------------------
+  -----------------------@900trending product section---------------------
   */
   .trending-products {
     flex-direction: row;
@@ -425,7 +440,7 @@
   }
 
   /* 
-  -----------------------testimonial section------------------------
+  -----------------------@900testimonial section------------------------
   */
 
   .testimonial {
